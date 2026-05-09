@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App </title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./axiosConnector.js" defer></script>
+</head>
+<body>
+
+    <div style:"flex" justify-content : "space-between" , padding:0px 100px>
+        
+        <!-- Parent div containg all the notes added uptil now -->
+        <div id="notesSection">
+            Loading...
+        </div>
+        
+
+        <div>
+            <span>
+                <input id="inputNote" , type ="text">
+                <button onclick="addNote()" placeholder="What's in ur mind??">Add Note</button> 
+            </span>
+            
+        </div>
+        
+    </div>
+    <!--//Fix : use script code in script tag to make sure browser runs it  -->
+    <!--
+    <script>
+        window.onload = getNotes ;
+    </script>
+    -->
+
+   
+</body>
+</html>
