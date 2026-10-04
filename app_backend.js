@@ -1,9 +1,11 @@
 import express, { Router } from "express" ;
+import "dotenv/config";
 const app = express();
 
 //Import - jsonwebtoken package for tokens
 import jwt from "jsonwebtoken" ;
-
+const JWT_SECRET = process.env.JWT_SECRET || "default_secret_key";
+const PORT = process.env.PORT || 3000;
 /* The CORS Issue (Crucial)
 By default, a browser won't let a website on one "origin" (like a local file or port) talk to a server on another port (3004) for security reasons. You need to tell Express to allow these requests.*/
 import cors from "cors";
@@ -204,4 +206,4 @@ app.post("/notes" , checkTokenAuth , (req,res)=>{
 })
 
 
-app.listen(3004) ;
+app.listen(PORT) ;
