@@ -6,7 +6,7 @@ async function signup(){
     const password = document.getElementById("password").value ;
 
     //pass this to backend
-    const response = await axios.post("http://localhost:3004/signup" ,{
+    const response = await axios.post("https://securenotes-full-stack-jwt.onrender.com/signup" ,{
         username , password
     } );
     
